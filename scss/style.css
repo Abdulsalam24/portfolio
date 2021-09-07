@@ -1,0 +1,629 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  background-color: #242729;
+}
+
+h1 {
+  color: whitesmoke;
+  font-size: 2em;
+}
+
+a, li, ul {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav.active {
+  background-color: #181819;
+  position: fixed;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+nav {
+  height: 50px;
+  line-height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav p {
+  font-size: 1em;
+  color: whitesmoke;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav .left-nav {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  padding: 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+nav .menu div {
+  height: 5px;
+  width: 20px;
+  background-color: white;
+  margin: 2px;
+  cursor: pointer;
+}
+
+nav .menu-list {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #181819;
+  height: calc(100vh - 50px);
+}
+
+nav .menu-list ul li a {
+  color: whitesmoke;
+  font-size: 0.7em;
+}
+
+nav .menu-list ul li:hover {
+  cursor: pointer;
+}
+
+nav .menu-list ul li:hover a:hover {
+  color: #D25766;
+  cursor: pointer;
+}
+
+#nav.fixed .menu-list {
+  display: unset;
+}
+
+.menu div {
+  height: 5px;
+  width: 20px;
+  background-color: white;
+  margin: 2px;
+  cursor: pointer;
+}
+
+header {
+  height: 100vh;
+}
+
+header .welcome {
+  padding: 50px 0;
+}
+
+header .welcome .welcome-text {
+  width: 80%;
+  margin: auto;
+  letter-spacing: 0.1em;
+}
+
+header .welcome .welcome-text span {
+  color: white;
+  font-size: 1.6em;
+  cursor: pointer;
+}
+
+header .welcome .welcome-text span:hover {
+  color: red;
+}
+
+header .welcome .welcome-text p {
+  margin: 10px 0;
+  color: #D25766;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid #D25766;
+  outline: none;
+  padding: 10px 16px;
+  margin: 20px 0;
+}
+
+button a {
+  color: white;
+  font-size: 1em;
+}
+
+button:hover {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  color: #181819;
+  background-color: #D25766;
+}
+
+#about {
+  padding: 60px 0;
+}
+
+#about .about {
+  width: 80%;
+  margin: auto;
+}
+
+#about .about h1 {
+  margin: 30px 0;
+}
+
+#about .about .about-text {
+  -webkit-box-shadow: 0.25em 0.25em 0.75em #181819, 0.125em 0.125em 0.25em #181819;
+          box-shadow: 0.25em 0.25em 0.75em #181819, 0.125em 0.125em 0.25em #181819;
+  padding: 20px 20px;
+}
+
+#about .about p {
+  color: white;
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+#skills {
+  padding: 130px 0 150px 0;
+}
+
+#skills h1 {
+  margin: 0 60px 0 0;
+  text-align: right;
+}
+
+#skills .skills .skills-item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: rgba(24, 24, 25, 0.3);
+  margin: 20px auto 0 0;
+  padding: 10px;
+}
+
+#skills .skills .skills-item p {
+  color: whitesmoke;
+  font-size: 1em;
+}
+
+#skills .skills .skills-item img {
+  width: 80px;
+}
+
+#mywork h1 {
+  text-align: center;
+}
+
+#mywork .mywork {
+  width: 70%;
+  margin: auto;
+}
+
+#mywork .mywork h3 {
+  background-color: #D25766;
+  color: whitesmoke;
+  text-align: center;
+  font-size: 1em;
+}
+
+#mywork .mywork .work1 {
+  padding: 40px 0 0 0;
+}
+
+#contact {
+  padding: 90px 0 0 0;
+}
+
+#contact .contact {
+  width: 80%;
+  margin: auto;
+}
+
+#contact .contact img {
+  width: 20px;
+  height: 30px;
+}
+
+#footer {
+  background: #242729;
+}
+
+#footer .copyright {
+  padding: 10px 0;
+  text-align: center;
+  color: white;
+}
+
+#footer::before {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #55575A;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+  nav .menu div {
+    height: 5px;
+    width: 30px;
+    margin: 4px;
+  }
+  nav .left-nav {
+    padding: 0 80px;
+  }
+  header {
+    height: 100vh;
+  }
+  header .welcome {
+    padding: 100px 0;
+    width: 80%;
+    margin: auto;
+  }
+  header .welcome .welcome-text {
+    letter-spacing: 0.1em;
+    width: 100%;
+  }
+  button {
+    padding: 16px 20px;
+    margin: 20px 0;
+  }
+  button a {
+    font-size: 1em;
+  }
+  #about {
+    padding: 180px 0;
+  }
+  #about .about .about-text {
+    -webkit-box-shadow: 0.25em 0.25em 0.75em #181819, 0.125em 0.125em 0.25em #181819;
+            box-shadow: 0.25em 0.25em 0.75em #181819, 0.125em 0.125em 0.25em #181819;
+    padding: 30px;
+  }
+  #about .about p {
+    margin: 20px 0;
+    font-size: 1rem;
+  }
+  #skills {
+    padding: 170px 0;
+  }
+  #skills h1 {
+    margin: 30px 0;
+    text-align: center;
+  }
+  #skills .skills {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  #skills .skills .css {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    width: 100%;
+  }
+  #skills .skills .javascript {
+    -ms-grid-column: 3;
+    grid-column: 3/3;
+  }
+  #skills .skills .skills-item {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgba(24, 24, 25, 0.2);
+    margin: 30px auto 0 0;
+  }
+  #skills .skills .skills-item p {
+    font-size: 1rem;
+  }
+  #skills .skills .skills-item img {
+    width: 140px;
+  }
+  #mywork .mywork {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+    max-width: 600px;
+  }
+  #mywork .mywork h3 {
+    padding: 10px 0;
+  }
+  #mywork .mywork .work1 {
+    padding: 40px 0 0 0;
+  }
+  #contact {
+    padding: 160px 0 0 0;
+  }
+  #contact .contact {
+    width: 80%;
+    margin: auto;
+  }
+  #contact .contact img {
+    width: 20px;
+    height: 30px;
+  }
+  #footer .copyright {
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 25px;
+  }
+  nav {
+    height: 100px;
+    line-height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: unset;
+    -webkit-box-direction: unset;
+        -ms-flex-direction: unset;
+            flex-direction: unset;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav p {
+    font-size: 1em;
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  nav .left-nav {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    padding: 0 90px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50%;
+  }
+  nav .menu div {
+    display: none;
+  }
+  nav .menu-list {
+    display: unset;
+    position: unset;
+    width: 60%;
+    text-align: right;
+    background-color: transparent;
+    height: 100px;
+  }
+  nav .menu-list ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav .menu-list ul li a {
+    color: whitesmoke;
+    font-size: 0.6em;
+  }
+  nav .menu-list ul li:not(:last-child) {
+    margin-right: 30px;
+  }
+  nav .menu-list ul li:hover {
+    cursor: pointer;
+  }
+  nav .menu-list ul li:hover a:hover {
+    color: #D25766;
+    cursor: pointer;
+  }
+  header .welcome {
+    padding: 130px 0;
+  }
+  button {
+    margin: 20px 0;
+  }
+  button a {
+    color: white;
+    font-size: 1.6em;
+  }
+  button:hover {
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    color: #181819;
+    background-color: #D25766;
+  }
+  #about {
+    padding: 200px 0;
+  }
+  #about .about {
+    max-width: 700px;
+    margin: auto;
+  }
+  #about .about .about-text {
+    -webkit-box-shadow: 0.25em 0.25em 0.75em #181819, 0.125em 0.125em 0.25em #181819;
+            box-shadow: 0.25em 0.25em 0.75em #181819, 0.125em 0.125em 0.25em #181819;
+    padding: 40px;
+  }
+  #about .about .about-text p {
+    font-size: 1em;
+  }
+  #skills .skills {
+    max-width: 700px;
+    margin: auto;
+  }
+  #skills .skills .skills-item p {
+    font-size: 1.5rem;
+  }
+  #skills .skills .skills-item img {
+    width: 140px;
+  }
+  #mywork .mywork {
+    gap: 30px;
+    max-width: 700px;
+    margin: auto;
+  }
+  #mywork .mywork h3 {
+    padding: 14px 0;
+  }
+  #contact {
+    padding: 160px 0 0 0;
+    max-width: 650px;
+    margin: auto;
+  }
+  #footer .copyright {
+    padding: 20px 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    font-size: 30px;
+  }
+  nav p {
+    font-size: 1.4em;
+  }
+  nav .left-nav {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    padding: 0 140px;
+    width: 50%;
+  }
+  nav .menu-list {
+    width: 40%;
+  }
+  nav .menu-list ul li a {
+    font-size: 0.6em;
+  }
+  nav .menu-list ul li:not(:last-child) {
+    margin-right: 30px;
+  }
+  nav .menu-list ul li:hover {
+    cursor: pointer;
+  }
+  nav .menu-list ul li:hover a:hover {
+    color: #D25766;
+    cursor: pointer;
+  }
+  header .welcome {
+    padding: 150px 0;
+  }
+  header .welcome p {
+    margin: 20px 0;
+  }
+  button {
+    margin: 30px 0;
+    border: 2px solid #D25766;
+  }
+  button a {
+    color: white;
+  }
+  #about {
+    padding: 250px 0;
+  }
+  #about .about {
+    width: 60%;
+    margin: auto;
+  }
+  #about .about .about-text {
+    padding: 40px;
+  }
+  #about .about p {
+    margin: 40px 0;
+    font-size: 1rem;
+  }
+  #skills {
+    padding: 130px 0 300px 0;
+  }
+  #skills .skills {
+    max-width: 1000px;
+    margin: auto;
+  }
+  #skills .skills .skills-item {
+    margin: 50px auto 0;
+    padding: 10px p;
+    padding-color: whitesmoke;
+    padding-font-size: 1.5rem;
+  }
+  #skills .skills .skills-item img {
+    width: 150px;
+  }
+  #mywork .mywork {
+    gap: 30px;
+    max-width: 1000px;
+  }
+  #mywork .mywork h3 {
+    padding: 14px 0;
+  }
+  #contact {
+    padding: 160px 0 0 0;
+    max-width: 1000px;
+    margin: auto;
+  }
+  #footer .copyright {
+    padding: 20px 0;
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

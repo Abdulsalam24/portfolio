@@ -1,0 +1,697 @@
+@import 'config';
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: $pc-light;
+}
+
+h1{ 
+    color: whitesmoke;
+    font-size :2em;
+}
+
+
+
+a,li,ul{
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+// nav
+
+
+#nav.active{
+    background-color: $pc-dark;
+    position: fixed;
+    transition: $tran;
+}
+
+nav{
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    p{
+        font-size: 1em;
+        color: whitesmoke;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .left-nav{
+        transition: $tran;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .menu div{
+        height: 5px;
+        width: 20px;
+        background-color: white;
+        margin: 2px;
+        cursor: pointer;
+    }
+
+    .menu-list{
+        display: none;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: $pc-dark;
+        height: calc(100vh - 50px);
+        ul{
+            li{
+                a{
+                    color: whitesmoke;
+                    font-size: 0.7em;
+                }
+            }
+            li:hover{
+                cursor: pointer;
+                a:hover{
+                    color: $sc;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+#nav.fixed{
+    .menu-list{
+        display: unset;
+    }
+}
+
+.menu div{
+    height: 5px;
+    width: 20px;
+    background-color: white;
+    margin: 2px;
+    cursor: pointer;
+}
+
+
+header{
+    height: 100vh;
+    .welcome{
+        padding: 50px 0;
+        .welcome-text{
+            width:80%;
+            margin: auto;
+            letter-spacing: 0.1em;
+            span{
+                color: white;
+                font-size: 1.6em;
+                cursor: pointer;
+            }
+            span:hover{
+                color: red;
+            }
+            p{
+                margin: 10px 0;
+                color: $sc;
+            }
+        }    
+    }
+}
+
+button{
+    background-color: transparent;
+    border: 1px solid $sc;
+    outline: none;
+    padding: 10px 16px;
+    margin:20px 0 ;
+    a{
+        color: white;
+        font-size: 1em;
+    }   
+}
+button:hover{
+    transition: 0.4s;
+    color: $pc-dark;
+    background-color: $sc;
+}
+
+#about{
+    padding: 60px 0;
+    .about{
+        width: 80%;
+        margin: auto;
+        h1{
+            margin: 30px 0;
+        }
+        .about-text{
+            box-shadow: $bs;
+            padding: 20px 20px;
+        }
+        p{
+            color: white;
+            margin: 10px 0;
+        }
+    }
+
+}
+
+img{
+    width: 100%;
+}
+
+#skills{
+    padding: 130px 0 150px 0;
+    h1{
+        margin: 0 60px 0 0;
+        text-align: right;
+    }
+    .skills{
+        .skills-item{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: rgba($color: $pc-dark, $alpha: 0.3);
+            margin: 20px auto 0 0;
+            padding: 10px;
+            p{
+                color: whitesmoke;
+                font-size: 1em;
+            }
+            img{
+                width: 80px;
+            }
+        }
+    }
+}
+
+#mywork{
+    h1{
+        text-align: center;
+    }
+    .mywork{
+        width: 70%;
+        margin:auto;
+      
+       h3{
+           background-color: $sc;
+           color: whitesmoke;
+           text-align: center;
+           font-size: 1em;
+       }
+       .work1{
+            padding: 40px 0 0 0;
+       }
+    }
+}
+
+
+#contact{ 
+    padding: 90px 0 0 0 ;
+    .contact{
+        width: 80%;
+        margin: auto;
+        img{
+            width: 20px;
+            height: 30px;
+        }
+    }
+}
+
+#footer{
+    background: $pc-light;
+    .copyright{
+        padding:  10px 0;
+        text-align: center;
+        color: white;
+    }
+}
+
+#footer::before{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: $pc-lighter;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px){
+    body{
+        font-size:20px;
+    }
+        
+    nav{
+        .menu div{
+            height: 5px;
+            width:30px;
+            margin: 4px;
+        }
+        .left-nav{
+            padding: 0 80px;
+        }
+    }
+
+    header{
+        height: 100vh;
+        .welcome{
+            padding: 100px 0;
+            width: 80%;
+            margin: auto;
+            .welcome-text{
+                letter-spacing: 0.1em;
+                width: 100%;
+            }       
+        }
+    }
+
+    button{
+        padding: 16px 20px;
+        margin:20px 0 ;
+        a{
+            font-size: 1em;
+        }
+    }
+
+    #about{
+        padding: 180px 0;
+        .about{
+            .about-text{
+                box-shadow: $bs;
+                padding:30px;
+            }
+            p{
+                margin: 20px 0;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    #skills{
+        padding: 170px 0;
+        h1{
+            margin: 30px 0;
+            text-align: center;
+        }
+        .skills{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            .css{
+                grid-row: 2;
+                grid-column: 2/3;
+                width: 100%;
+                }
+            .javascript{
+                grid-column: 3/3;
+            }
+            .skills-item{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: rgba($color: $pc-dark, $alpha: 0.2);
+                margin: 30px auto 0 0;
+                p{
+                    font-size: 1rem;
+                }
+                img{
+                    width:140px;
+                }
+            }
+        }
+    }
+
+    #mywork{
+        .mywork{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 90%;
+            margin:auto;
+            padding: 40px 0;
+            max-width: 600px;
+            
+            h3{
+                padding: 10px 0;
+            }
+            .work1{
+                padding: 40px 0 0 0;
+            }
+        }
+    }
+
+
+
+
+
+    #contact{ 
+        padding: 160px 0 0 0 ;
+        .contact{
+            width: 80%;
+            margin: auto;   
+            img{
+                width: 20px;
+                height: 30px;
+            }
+        }
+    }
+
+
+    #footer{
+        .copyright{
+            padding:  10px 0;
+            font-size: 1rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1024px){
+    body{
+        font-size: 25px;
+    }
+    
+    nav{
+        height: 100px;
+        line-height:100px;
+        display: flex;
+        flex-direction: unset;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        p{
+            font-size: 1em;
+            color: whitesmoke;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .left-nav{
+            transition: $tran;
+            padding: 0 90px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 50%;
+        }
+        .menu div{
+            display: none;
+        }
+
+        .menu-list{
+            display: unset;
+            position: unset;
+            width: 60%;
+            text-align: right;
+            background-color: transparent;
+            height:  100px;
+
+            ul{
+                display: flex;
+                li{
+                    a{
+                        color: whitesmoke;
+                        font-size: 0.6em;
+                    }
+                }
+                li:not(:last-child){
+                margin-right: 30px;
+                }
+                li:hover{
+                    cursor: pointer;
+                    a:hover{
+                        color: $sc;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    header{
+        .welcome{
+            padding: 130px 0;   
+        } 
+    }
+
+
+
+
+    button{
+        margin:20px 0 ;
+        a{
+            color: white;
+            font-size: 1.6em;
+        }   
+    }
+    button:hover{
+        transition: 0.4s;
+        color: $pc-dark;
+        background-color: $sc;
+    }
+
+
+    #about{
+        padding: 200px 0;
+        .about{
+            max-width:700px;
+            margin: auto;
+            .about-text{
+                box-shadow: $bs;
+                padding:40px;
+                p{
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+
+    #skills{
+        .skills{
+            max-width:700px;
+            margin: auto;
+            .skills-item{
+                p{
+                    font-size: 1.5rem;
+                }
+                img{
+                    width:140px;
+                }
+            }
+        }
+    }
+
+    #mywork{
+        .mywork{
+            gap: 30px;
+            max-width:700px;
+            margin: auto;
+            h3{
+                padding: 14px 0;
+            }
+        }
+    }
+
+    #contact{ 
+        padding: 160px 0 0 0 ;
+        max-width:650px;
+        margin: auto;
+    }
+
+
+    #footer{
+        .copyright{
+            padding:  20px 0;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:1440px){    
+    
+    body{
+        font-size: 30px;
+    }
+    
+    
+    nav{
+        p{
+            font-size: 1.4em;
+        }
+        .left-nav{
+            transition: $tran;
+            padding: 0 140px;
+            width: 50%;
+        }
+        .menu-list{
+            width: 40%;
+            ul{
+                li{
+                    a{
+                        font-size: 0.6em;
+                    }
+                }
+                li:not(:last-child){
+                margin-right: 30px;
+                }
+                li:hover{
+                    cursor: pointer;
+                    a:hover{
+                        color: $sc;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+
+    header{
+        .welcome{
+            // font-size: 2em;
+            padding: 150px 0;
+            p{
+                margin: 20px 0;
+            }       
+        } 
+    }
+
+    button{
+        margin:30px 0 ;
+        border: 2px solid $sc;
+        a{
+            color: white;
+            // font-size: 2rem;
+        }   
+    }
+
+    #about{
+        padding: 250px 0;
+        .about{
+            width: 60%;
+            margin: auto;
+
+            .about-text{
+                padding:40px;
+              
+            }
+            p{
+                margin: 40px 0;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    
+    #skills{
+        padding: 130px 0 300px 0;
+        .skills{
+            max-width: 1000px;
+            margin: auto;
+            .skills-item{
+                margin: 50px auto 0;
+                padding: 10px
+                p{
+                    color: whitesmoke;
+                    font-size: 1.5rem;
+                }
+                img{
+                    width: 150px;
+                }
+            }
+        }
+    }
+
+
+
+    #mywork{
+        .mywork{
+                gap: 30px;
+                max-width: 1000px;
+            h3{
+                padding: 14px 0;
+            }
+        }
+    }
+
+    #contact{ 
+        padding: 160px 0 0 0 ;
+        max-width:1000px;
+        margin: auto;
+    }
+
+
+    #footer{
+        .copyright{
+            padding:  20px 0;
+            font-size: 1rem;
+        }
+    }
+
+
+
+
+
+
+}
+
