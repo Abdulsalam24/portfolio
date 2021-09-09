@@ -13,7 +13,8 @@ body{
     padding: 0;
     font-size: 16px;
     background-color: $pc-light;
-    font-family: 'Allison', cursive;
+   
+    // 
 
 }
 
@@ -40,7 +41,10 @@ a,li,ul{
     transition: $tran;
 }
 
+
+
 nav{
+    z-index:4;
     height: 50px;
     line-height: 50px;
     display: flex;
@@ -77,6 +81,8 @@ nav{
         text-align: center;
         background-color: $pc-dark;
         height: calc(100vh - 50px);
+        z-index:3;
+        
         ul{
             li{
                 a{
@@ -99,6 +105,31 @@ nav{
 #nav.fixed{
     .menu-list{
         display: unset;
+    }
+}
+
+#nav.fixed{
+    .left-nav{
+        .menu{
+            position: relative;
+            width: 20px;
+            transition:2s;
+            .dash{
+                top: 0;
+                z-index: 7;
+                position: absolute;
+                transition: $trans;
+            }
+            .dash:nth-child(1){
+                transform: rotate(45deg);
+            }
+            .dash:nth-child(3){
+                display: none;
+            }
+            .dash:nth-child(2){
+                transform: rotate(-45deg);
+            }
+        }
     }
 }
 
@@ -141,10 +172,10 @@ button{
     outline: none;
     padding: 10px 16px;
     margin:20px 0 ;
+    cursor: pointer;
     a{
         color: white;
         font-size: 1em;
-        position: relative;
     }   
 }
 button:hover{
@@ -210,15 +241,36 @@ img{
     .mywork{
         width: 70%;
         margin:auto;
-      
        h3{
            background-color: $sc;
            color: whitesmoke;
            text-align: center;
            font-size: 1em;
        }
+       
        .work1{
-            padding: 40px 0 0 0;
+            position: relative;
+            margin: 40px 0 0 0;
+            &:hover{
+                .thumbnail{
+                    display: unset;
+                }
+            }
+            .thumbnail{
+                display: none;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                background-color: $pc-dark;
+                opacity: 0.8;
+                button{
+                    color: white;
+                    padding: 20px 30px;
+                    margin: 35px 0;
+                }
+            }
        }
     }
 }
@@ -229,9 +281,14 @@ img{
     .contact{
         width: 80%;
         margin: auto;
-        img{
-            width: 20px;
-            height: 30px;
+        .contact-img{
+            a{
+                img{
+                    // width: 20px;
+                    // height: 30px;
+                    border: 2px solid red;
+                }
+            }  
         }
     }
 }
@@ -252,26 +309,6 @@ img{
     width: 100%;
     background-color: $pc-lighter;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @media screen and (min-width: 768px){
@@ -365,14 +402,18 @@ img{
             gap: 20px;
             width: 90%;
             margin:auto;
-            padding: 40px 0;
             max-width: 600px;
-            
             h3{
-                padding: 10px 0;
+                padding: 5px 0;
             }
             .work1{
-                padding: 40px 0 0 0;
+                .thumbnail{
+                    display: none;
+                    button{
+                        padding: 25px 30px;
+                        margin: 55px 0;
+                    }
+                }
             }
         }
     }
@@ -536,8 +577,17 @@ img{
             gap: 30px;
             max-width:700px;
             margin: auto;
+            .work1{
+                .thumbnail{
+                    display: none;
+                    button{
+                        padding: 25px 30px;
+                        margin: 55px 0;
+                    }
+                }
+            }
             h3{
-                padding: 14px 0;
+                padding: 10px 0;
             }
         }
     }
@@ -671,8 +721,17 @@ img{
         .mywork{
                 gap: 30px;
                 max-width: 1000px;
+                .work1{
+                    .thumbnail{
+                        display: unset;
+                        button{
+                            padding: 40px 50px;
+                            margin: 70px 0;
+                        }
+                    }
+                }
             h3{
-                padding: 14px 0;
+                padding: 10px 0;
             }
         }
     }
@@ -682,19 +741,11 @@ img{
         max-width:1000px;
         margin: auto;
     }
-
-
     #footer{
         .copyright{
             padding:  20px 0;
             font-size: 1rem;
         }
     }
-
-
-
-
-
-
 }
 
