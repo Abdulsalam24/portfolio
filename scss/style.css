@@ -36,6 +36,7 @@ a, li, ul {
 }
 
 nav {
+  z-index: 4;
   height: 50px;
   line-height: 50px;
   display: -webkit-box;
@@ -57,7 +58,7 @@ nav {
 nav p {
   font-size: 1em;
   color: whitesmoke;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Amiri', serif;
 }
 
 nav .left-nav {
@@ -92,6 +93,7 @@ nav .menu-list {
   text-align: center;
   background-color: #181819;
   height: calc(100vh - 50px);
+  z-index: 3;
 }
 
 nav .menu-list ul li a {
@@ -112,6 +114,31 @@ nav .menu-list ul li:hover a:hover {
   display: unset;
 }
 
+#nav.fixed .left-nav .menu {
+  position: relative;
+  width: 20px;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+#nav.fixed .left-nav .menu .dash {
+  position: absolute;
+}
+
+#nav.fixed .left-nav .menu .dash:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#nav.fixed .left-nav .menu .dash:nth-child(3) {
+  display: none;
+}
+
+#nav.fixed .left-nav .menu .dash:nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .menu div {
   height: 5px;
   width: 20px;
@@ -125,7 +152,7 @@ header {
 }
 
 header .welcome {
-  padding: 50px 0;
+  padding: 80px 0;
 }
 
 header .welcome .welcome-text {
@@ -141,7 +168,7 @@ header .welcome .welcome-text span {
 }
 
 header .welcome .welcome-text span:hover {
-  color: red;
+  color: #D25766;
 }
 
 header .welcome .welcome-text p {
@@ -155,6 +182,7 @@ button {
   outline: none;
   padding: 10px 16px;
   margin: 20px 0;
+  cursor: pointer;
 }
 
 button a {
@@ -189,7 +217,7 @@ button:hover {
 }
 
 #about .about p {
-  color: white;
+  color: whitesmoke;
   margin: 10px 0;
 }
 
@@ -247,10 +275,33 @@ img {
 }
 
 #mywork .mywork .work1 {
-  padding: 40px 0 0 0;
+  position: relative;
+  margin: 40px 0 0 0;
+}
+
+#mywork .mywork .work1:hover .thumbnail {
+  display: unset;
+}
+
+#mywork .mywork .work1 .thumbnail {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #181819;
+  opacity: 0.8;
+}
+
+#mywork .mywork .work1 .thumbnail button {
+  color: white;
+  padding: 20px 30px;
+  margin: 35px 0;
 }
 
 #contact {
+  margin-top: 30px;
   padding: 90px 0 0 0;
 }
 
@@ -259,13 +310,34 @@ img {
   margin: auto;
 }
 
-#contact .contact img {
-  width: 20px;
-  height: 30px;
+#contact .contact .contact-icon{
+  display: flex;
+  padding: 20px 0;
+}
+
+#contact .contact i{
+  border: 2px solid black;
+  border-radius: 50%;
+  padding:10px;
+  cursor:pointer;
+}
+
+
+#contact .contact a:not(:first-child){
+  margin-left:20px;
+}
+
+#contact .contact i:hover {
+  transform: rotate(360deg);
+  transition: 0.4s;
+}
+
+.fa-envelope,.twitter,.facebook{
+  color: white;
 }
 
 #footer {
-  background: #242729;
+  background: #181819;
 }
 
 #footer .copyright {
@@ -376,14 +448,17 @@ img {
     gap: 20px;
     width: 90%;
     margin: auto;
-    padding: 40px 0;
     max-width: 600px;
   }
   #mywork .mywork h3 {
-    padding: 10px 0;
+    padding: 5px 0;
   }
-  #mywork .mywork .work1 {
-    padding: 40px 0 0 0;
+  #mywork .mywork .work1 .thumbnail {
+    display: none;
+  }
+  #mywork .mywork .work1 .thumbnail button {
+    padding: 25px 30px;
+    margin: 55px 0;
   }
   #contact {
     padding: 160px 0 0 0;
@@ -524,12 +599,19 @@ img {
     max-width: 700px;
     margin: auto;
   }
+  #mywork .mywork .work1 .thumbnail {
+    display: none;
+  }
+  #mywork .mywork .work1 .thumbnail button {
+    padding: 25px 30px;
+    margin: 55px 0;
+  }
   #mywork .mywork h3 {
-    padding: 14px 0;
+    padding: 10px 0;
   }
   #contact {
     padding: 160px 0 0 0;
-    max-width: 650px;
+    max-width: 850px;
     margin: auto;
   }
   #footer .copyright {
@@ -613,12 +695,19 @@ img {
     gap: 30px;
     max-width: 1000px;
   }
+  #mywork .mywork .work1 .thumbnail {
+    display: none;
+  }
+  #mywork .mywork .work1 .thumbnail button {
+    padding: 40px 50px;
+    margin: 70px 0;
+  }
   #mywork .mywork h3 {
-    padding: 14px 0;
+    padding: 10px 0;
   }
   #contact {
     padding: 160px 0 0 0;
-    max-width: 1000px;
+    max-width: 1250px;
     margin: auto;
   }
   #footer .copyright {
